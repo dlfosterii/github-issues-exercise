@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import IssueList from './components/IssueList'
+
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>👋Want to contribute to facebook/create-react-app?
+          </p>
+        <p>If you have a bug or an idea, read the contributing guidelines before opening an issue.<br />
+          If you're ready to tackle some open issues, we've collected some good first issues for you.
+          </p>
       </header>
+  
+  <IssueList/>
+    
+  
+  
+  
     </div>
   );
+
 }
+
+
+
+
+
+
+
+
+
 
 export default App;
