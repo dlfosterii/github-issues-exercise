@@ -34,9 +34,16 @@ export default class IssueList extends Component {
                 {this.state.issues.map(
                     (issue, index) => {
                         return <Issue
+                            key={index}
                             title={issue.title}
                             url={issue.url}
                             body={issue.body}
+                            usr={issue.user.login}
+                            labels={issue.labels}
+                            number={issue.number}
+                            created={new Date(issue.created_at).getHours()}
+
+
                         />
                     })
                 }
