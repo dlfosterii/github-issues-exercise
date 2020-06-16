@@ -15,7 +15,7 @@ export default class IssueList extends Component {
             .then(res => res.json())
             .then(data => {
                 this.setState({
-                    issues: data
+                    issues: data ? data : []
                 })
                 console.log(data)
             });
@@ -29,7 +29,13 @@ export default class IssueList extends Component {
     render() {
         return (
             <div>
-                <h1>Issue list</h1>
+            <header className="App-header">
+              <p><span role='img' aria-label='...'>👋</span>Want to contribute to facebook/create-react-app?
+                </p>
+              <p>If you have a bug or an idea, read the contributing guidelines before opening an issue.<br />
+                If you're ready to tackle some open issues, we've collected some good first issues for you.
+                </p>
+            </header>
 
                 {this.state.issues.map(
                     (issue, index) => {

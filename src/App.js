@@ -1,26 +1,28 @@
 import React from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import './App.css';
-import IssueList from './components/IssueList'
+import IssueList from './components/IssueList';
+import IssueDetail from './components/IssueDetail';
 
 
 function App() {
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>👋Want to contribute to facebook/create-react-app?
-          </p>
-        <p>If you have a bug or an idea, read the contributing guidelines before opening an issue.<br />
-          If you're ready to tackle some open issues, we've collected some good first issues for you.
-          </p>
-      </header>
-  
-  <IssueList/>
+    <BrowserRouter>
+      <div className="App">
+
+      <Switch>
+        <Route exact path='/' component={IssueList}/>
+        <Route path='/issues/:issueNumber' component={IssueDetail}/>
+        <Route>
+          <h1>Error! 404 - Not Found</h1>
+        </Route>
+
+      </Switch>
     
-  
-  
-  
-    </div>
+      </div>
+
+      </BrowserRouter>
   );
 
 }
