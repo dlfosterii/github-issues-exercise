@@ -3,6 +3,9 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import './App.css';
 import IssueList from './components/IssueList';
 import IssueDetail from './components/IssueDetail';
+import JavascriptTimeAgo from 'javascript-time-ago';
+import en from 'javascript-time-ago/locale/en';
+JavascriptTimeAgo.addLocale(en)
 
 
 function App() {

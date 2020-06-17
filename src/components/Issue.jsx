@@ -1,10 +1,10 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 
 export default function Issue(props) {
     return (
         <div style={{border: '1px solid black'}}>
-            <a style={{textDecoration:'none'}} href={props.url}>{props.title}</a>
+            <Link style={{textDecoration:'none'}} to={`/issues/${props.number}`}>{props.title}</Link>
             {props.labels.map((label, index)=>{
                 return(
                 <span key={index} style={{backgroundColor:`#${label.color}`}}>{label.name}</span>)

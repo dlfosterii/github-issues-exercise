@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Issue from './Issue';
 
+
 export default class IssueList extends Component {
     constructor(props) {
         super(props);
@@ -48,6 +49,7 @@ export default class IssueList extends Component {
                             labels={issue.labels}
                             number={issue.number}
                             created={new Date(issue.created_at).getHours()}
+                            comments={issue.comments}
 
 
                         />
